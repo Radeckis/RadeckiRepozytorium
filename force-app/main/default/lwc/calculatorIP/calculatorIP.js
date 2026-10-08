@@ -62,8 +62,8 @@ export default class App extends LightningElement {
     }
   }
   clearScore() {
-    this.score = "0";
-    this.scoreUp = "";
+      this.score = "0";
+      this.scoreUp = "";
   }
   square() {
     if (this.score.includes("+") || this.score.includes("-") || this.score.includes("x") || this.score.includes("÷")) {
@@ -87,31 +87,30 @@ export default class App extends LightningElement {
     }
   }
   equals() {
-    this.score = this.score.replaceAll(",", ".");
+      this.score = this.score.replaceAll(",", ".");
     const operators = this.score.match(/[+\-x÷]/g);
     const numbers = this.score.split(/[+\-x÷]/);
     const newNumbers = [Number(numbers[0])];
     const newOperators = [];
     for (let i = 0; i < operators.length; i++) {
-        if (operators[i] === "x") {
-            newNumbers[newNumbers.length - 1] = newNumbers[newNumbers.length - 1] * Number(numbers[i + 1]);
-        } else if (operators[i] === "÷") {
-            newNumbers[newNumbers.length - 1] = newNumbers[newNumbers.length - 1] / Number(numbers[i + 1]);
-        } else {
-            newOperators.push(operators[i]);
-            newNumbers.push(Number(numbers[i + 1]));
-        }
+      if (operators[i] === "x") {
+      newNumbers[newNumbers.length - 1] = newNumbers[newNumbers.length - 1] * Number(numbers[i + 1]);
+    } else if (operators[i] === "÷") {
+      newNumbers[newNumbers.length - 1] = newNumbers[newNumbers.length - 1] / Number(numbers[i + 1]);
+    } else {
+      newOperators.push(operators[i]);
+      newNumbers.push(Number(numbers[i + 1]));
     }
-    let result = newNumbers[0];
+  } let result = newNumbers[0];
     for (let i = 0; i < newOperators.length; i++) {
-        this.scoreUp = this.score.replaceAll(".", ",");
-        if (newOperators[i] === "+") {
-            result = result + newNumbers[i + 1];
-        } else if (newOperators[i] === "-") {
-            result = result - newNumbers[i + 1];
-        }
+      this.scoreUp = this.score.replaceAll(".", ",");
+      if (newOperators[i] === "+") {
+      result = result + newNumbers[i + 1];
+    } else if (newOperators[i] === "-") {
+      result = result - newNumbers[i + 1];
     }
-    this.score = result.toString();
-    this.score = this.score.replace(".", ",");
+  }
+      this.score = result.toString();
+      this.score = this.score.replace(".", ",");
   }
 }
