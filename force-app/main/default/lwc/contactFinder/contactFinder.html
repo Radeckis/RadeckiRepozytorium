@@ -1,0 +1,45 @@
+<template>
+    <div class="card-helper">
+        <h2 class="card-title">Contact Finder</h2>
+        <div class="slds-p-horizontal_small">
+            <p class="moj-label">Email</p>
+            <lightning-input placeholder={placeholderText} variant="label-hidden" value={email} onchange={handleChange} onkeyup={handleKeyUp} onfocus={handleFocus} onblur={handleBlur}></lightning-input>
+
+            <template if:true={podpowiedzi.length}>
+                <ul class="slds-m-top_x-small lista-podpowiedzi">
+                    <template for:each={podpowiedzi} for:item="p">
+                        <li key={p.Id} data-id={p.Id} onclick={wybierzPodpowiedz} class="slds-p-vertical_xx-small kontener-duplikatu">
+                            <strong>Email:</strong> {p.Email} <strong>Name:</strong> {p.LastName} <strong>Phone:</strong> {p.Phone}
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            <img src={emailImage} alt="ludzik" class="ludzik-img"/>
+            <lightning-button label="Find Contact" onclick={handleClick}></lightning-button>
+
+            <template if:true={kontakt}>
+                <div class="slds-m-top_medium slds-box slds-theme_default">
+                    <template if:true={maDuplikaty}>
+                        <a onclick={toggleDuplikaty} class="slds-text-link">{etykietaWiecej}</a>
+                        <template if:true={pokazDuplikaty}>
+                            <ul class="slds-m-top_x-small">
+                                <template for:each={duplikaty} for:item="d">
+                                    <li key={d.Id} data-id={d.Id} onclick={wybierzDuplikat} class="slds-p-vertical_xx-small kontener-duplikatu">
+                                        {d.LastName} - {d.Email}
+                                    </li>
+                                </template>
+                            </ul>
+                        </template>
+                    </template>
+
+                    <div onclick={handleOpenContact} class="kontener-kontaktu slds-m-top_x-small">
+                        <p><strong>{kontakt.LastName}</strong></p>
+                        <p>Email: {kontakt.Email}</p>
+                        <p>Phone: {kontakt.Phone}</p>
+                        <p>Company: {nazwaFirmy}</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

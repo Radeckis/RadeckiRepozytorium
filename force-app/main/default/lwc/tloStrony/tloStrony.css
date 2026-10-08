@@ -1,0 +1,34 @@
+.title-bar {
+    position: fixed !important;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    z-index: 999999 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.site-title {
+    font-size: 54px;
+    font-weight: 400;
+    font-family: 'RoyaltyCriminals', sans-serif;
+    color: #10b981;
+    -webkit-text-stroke: 2px #000000;
+    text-stroke: 2px #000000;
+    text-shadow:
+        0 0 8px rgba(0,0,0,0.6),
+        0 3px 5px rgba(0,0,0,0.5),
+        0 0 25px rgba(16,185,129,0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-image:
+        repeating-linear-gradient(115deg, transparent 0px, transparent 8px, rgba(0,0,0,0.5) 8px, rgba(0,0,0,0.5) 9px, transparent 9px, transparent 22px),
+        repeating-linear-gradient(35deg, transparent 0px, transparent 14px, rgba(0,0,0,0.4) 14px, rgba(0,0,0,0.4) 15px, transparent 15px, transparent 30px),
+        repeating-linear-gradient(75deg, transparent 0px, transparent 18px, rgba(0,0,0,0.3) 18px, rgba(0,0,0,0.3) 19px, transparent 19px, transparent 40px);
+    -webkit-background-clip: text;
+    background-clip: text;
+}

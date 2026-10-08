@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Prosty Kalkulator" icon-name="standard:calculator">
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                type="number" 
+                label="Liczba A" 
+                onchange={handleAChange}>
+            </lightning-input>
+
+            <lightning-input 
+                type="number" 
+                label="Liczba B" 
+                onchange={handleBChange}>
+            </lightning-input>
+
+            <div class="slds-m-top_medium">
+                <lightning-button label="Dodaj" onclick={handleAdd}></lightning-button>
+                <lightning-button label="Odejmij" onclick={handleSubtract}></lightning-button>
+                <lightning-button label="Pomnóż" onclick={handleMultiply}></lightning-button>
+                <lightning-button label="Podziel" onclick={handleDivide}></lightning-button>
+            </div>
+
+            <div class="slds-m-top_medium slds-text-heading_medium">
+                Wynik: {result}
+            </div>
+        </div>
+    </lightning-card>
+</template>

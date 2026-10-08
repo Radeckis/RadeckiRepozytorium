@@ -1,0 +1,28 @@
+<template>
+    <div class="calculator">
+        <p class="scoreId score-top">{scoreUp}</p>
+        <p class="scoreId score-bottom">{score}</p>
+        <div class="card">
+            <button class="buttons button-grey" onclick={clearScore}>C</button>
+            <button class="buttons button-grey" onclick={undoLast}>⌫</button>
+            <button class="buttons button-grey" onclick={percent}>%</button>
+            <button class="buttons button-orange" data-value="÷" onclick={addOperator}>÷</button>
+            <button class="buttons" data-value="7" onclick={addNumber}>7</button>
+            <button class="buttons" data-value="8" onclick={addNumber}>8</button>
+            <button class="buttons" data-value="9" onclick={addNumber}>9</button>
+            <button class="buttons button-orange" data-value="x" onclick={addOperator}>x</button>
+            <button class="buttons" data-value="4" onclick={addNumber}>4</button>
+            <button class="buttons" data-value="5" onclick={addNumber}>5</button>
+            <button class="buttons" data-value="6" onclick={addNumber}>6</button>
+            <button class="buttons button-orange" data-value="-" onclick={addOperator}>-</button>
+            <button class="buttons" data-value="1" onclick={addNumber}>1</button>
+            <button class="buttons" data-value="2" onclick={addNumber}>2</button>
+            <button class="buttons" data-value="3" onclick={addNumber}>3</button>
+            <button class="buttons button-orange" data-value="+" onclick={addOperator}>+</button>
+            <button class="buttons" onclick={square}>√</button>
+            <button class="buttons" data-value="0" onclick={addNumber}>0</button>
+            <button class="buttons" data-value="," onclick={addNumber}>,</button>
+            <button class="buttons button-orange" onclick={equals}>=</button>  
+        </div>  
+    </div> 
+</template>                                                    

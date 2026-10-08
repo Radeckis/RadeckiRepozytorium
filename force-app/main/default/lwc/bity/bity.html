@@ -1,0 +1,26 @@
+<template>
+    <div class="deck">
+        <p class="trackTitle">{trackTitle}</p>
+
+        <div class="playerRow">
+            <button class={playButtonClass} onclick={handleToggle}>
+                <span class="iconPlay"></span>
+                <span class="iconPause"></span>
+            </button>
+
+            <div class="visualizerColumn">
+                <canvas class="visualizer" lwc:dom="manual"></canvas>
+                <input
+                    type="range"
+                    class="seekBar"
+                    min="0"
+                    max="1000"
+                    value={seekValue}
+                    oninput={handleSeek}
+                />
+            </div>
+        </div>
+
+        <audio class="audioPlayer" lwc:dom="manual"></audio>
+    </div>
+</template>

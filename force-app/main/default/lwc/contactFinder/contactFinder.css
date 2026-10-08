@@ -1,0 +1,118 @@
+.kontener-kontaktu {
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    border-radius: 0.5rem;
+}
+
+.kontener-kontaktu:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.kontener-kontaktu p {
+    margin: 0.25rem 0;
+}
+
+.kontener-kontaktu p:first-child {
+    font-size: 1.1rem;
+    color: #000000;
+}
+.kontener-duplikatu {
+    cursor: pointer;
+}
+
+.kontener-duplikatu:hover {
+    background-color: #000000;
+}
+lightning-input {
+    --slds-c-input-color-background: rgb(202, 202, 202);
+    --slds-c-input-color-border: rgba(0, 0, 0, 0.3);
+    --slds-c-input-radius-border: 16px;   
+}
+lightning-button {
+    --slds-c-button-neutral-color-background: rgba(255, 255, 255, 0.5);
+    --slds-c-button-neutral-color-background-hover: rgba(151, 151, 151, 0.6);
+    --slds-c-button-text-color: rgba(0, 0, 0, 0.9);
+    --slds-c-button-text-color-hover: rgba(0, 0, 0, 0.9);
+
+    --slds-c-button-neutral-color-border: rgba(0, 0, 0, 0.3);
+    --slds-c-button-neutral-color-border-hover: rgba(0, 0, 0, 0.5);
+    --slds-c-button-radius-border: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+
+    font-weight: bold;
+    border-radius: 16px;
+    display: block;
+    width: fit-content;
+    margin-top: 24px;
+}
+.lista-podpowiedzi {
+    list-style: none;
+    padding: 4px;
+    margin: 4px 0 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    background: rgba(221, 167, 207, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.lista-podpowiedzi li {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+.lista-podpowiedzi li:hover {
+    background-color: rgba(22, 82, 240, 0.08);
+}
+.card-helper {
+    background: rgba(111, 2, 126, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+    padding: 1.5rem;
+    overflow: visible;
+}
+.card-helper .slds-card {
+    border-radius: 12px !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.card-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #141212;
+    font-family: OCR A Std, monospace;
+    text-shadow: 5px 2px 3px rgba(0, 0, 0, 0.2);
+    margin-left: 60px; 
+}
+:host {
+    display: block;
+    margin-top: 80px;
+    border: none;
+    box-shadow: none;
+}
+lightning-input .slds-form-element__label {
+    font-size: 1.1rem;
+}
+.moj-label {
+    font-size: 1rem;
+    color: #2c2a2a;
+    margin-left: 10px;
+}
+
+.ludzik-img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 35px;  
+    left: 38px; 
+    border-radius: 48px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
