@@ -10,13 +10,13 @@ renderedCallback() {
     const style = document.createElement('style');
     style.innerText =
         'html, body {' +
-        'background-color: #fd96c1 !important;' +
+        'background-color: #fcfcfc !important;' +
         'min-height: 100%;' +
         'margin: 0 !important;' +
         'padding: 0 !important;' +
         '}' +
         '#brandBand_1, .slds-template__container, .DESKTOP.oneAlohaPage, .oneAppLayoutHost, .viewport, .colSide, .colMain, .top, .bottomWrapper, .bottomLeft, .bottomRight, .flexipagePage, .homeDesktopTemplate, .homeLanding {' +
-        'background-color: #fd96c1 !important;' +
+        'background-color: #000000 !important;' +
         '}';
     document.head.appendChild(style);
 }
